@@ -1,0 +1,114 @@
+.about-container {
+    font-family: 'Space Grotesk', sans-serif;
+    padding-left: 80px;
+    padding-top: 40px;
+    background: linear-gradient(0deg, rgba(160,102,255,1) 11%, rgba(255,199,0,0.2525603991596639) 40%, rgba(255,255,255,1) 100%);
+  }
+  
+  .about-container img {
+    width: 20%;
+    float: left;
+    margin-right: 40px;
+  }
+  
+  .about-container p {
+    font-size: 18pt;
+    line-height: 36px;
+    text-align: justify;
+  }
+  
+  .about-container .w-50 {
+    padding-bottom:100px;
+    width: 45%;
+  }
+  .about-name {
+    animation: fadeIn 5s;
+    color: #D7B2C5;
+    font-size:2.6em;
+    font-weight:600;
+    line-height: 1.4em;
+    padding-top:20px;
+  }
+
+.arrow{
+  position:relative;
+  width:88px;
+  height:88px;
+  cursor:pointer;
+/*   border:solid 1px white; */
+  transition:0.5s;
+  overflow:hidden;
+}
+
+.arrow:hover{
+/*  animation:borderAni 5s cubic-bezier(0, 0.6, 1, 0.4); */
+      border:solid 0px #D7B2C5; 
+    /* border-radius:50%; */
+}
+
+.arrow:after{
+  position:absolute;
+  display:block;
+  content:"";
+  color:#D7B2C5;
+  width: 39px;
+  height: 20px;
+/*   border:solid 1px;  */
+  top:20px;
+  /* border-right:solid 4px; */
+  transform:translatex(4px);
+}
+
+.arrow:before{
+  position:absolute;
+  display:block;
+  content:"";
+  color:#D7B2C5;
+  width: 50px;
+  height: 50px;
+/*   border:solid 1px;  */
+  border-top:solid 4px;
+  border-left:solid 4px;
+  top:50%;
+  left:45px;
+  transform-origin:0% 0%;
+  transform:rotatez(-135deg);
+
+}
+.arrow:hover:before{
+ animation: aniArrow01 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+}
+
+.arrow:hover:after{
+ animation: aniArrow02 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+}
+
+
+@keyframes aniArrow01 {
+  0% {
+    transform:rotatez(-135deg) translateY(30px) translateX(30px);
+  }
+  100% {
+    transform: rotatez(-135deg) translateY(-35px) translateX(-35px);
+  }
+}
+
+
+@keyframes aniArrow02 {
+  0% {
+    transform:translateY(-44px);
+  }
+  100% {
+    transform:translateY(45px);
+  }
+}
+
+@keyframes borderAni{
+   0% {
+    border:solid 2px #D7B2C5;
+  }
+  100% {    
+    border:solid 2px #D7B2C5; 
+    border-radius:50%;
+  }
+}
